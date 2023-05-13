@@ -1,0 +1,231 @@
+ @import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color:  hsl(204, 43%, 93%);
+    font-size: 16px;
+}
+main{
+   display: grid;
+   width: 37.2rem;
+   grid-template-areas: 'header header' 'left right' 'left right';
+   grid-template-columns: 1.2fr 1.2fr;
+   grid-template-rows:  1fr 1.2fr;
+   font-family: 'Karla', sans-serif;
+   border-radius: .5rem;
+   overflow: hidden;
+   box-shadow: .1rem .4rem .7rem rgba(99, 97, 97, 0.24);
+   position: relative;
+}
+
+.top-header{
+    background-color: white;
+    grid-area: header;
+    
+}
+
+.top-header > h1{
+    padding-top: 2rem;
+    font-size: 1.3rem;
+    margin-left: 2rem;
+    margin-bottom: 1.3rem;
+    color: hsl(179, 62%, 43%);
+}
+
+.top-header > h2{
+    margin-left: 2rem;
+    font-size: 1rem;
+    color: hsl(71, 73%, 54%);
+}
+
+.top-header p{
+    margin-top: 1rem;
+    margin-left: 2rem;
+    width: 32rem;
+    line-height: 1.5;
+    margin-bottom: 2.4rem;
+    color: hsl(204, 30%, 75%);
+    font-weight: 400;
+    font-size: .9rem;
+}
+.left{
+    background-color: hsl(179, 62%, 43%);
+    grid-area: left;
+}
+
+.left > h2{
+    padding-top: 2rem;
+    font-size: 1rem;
+    margin-left: 2rem;
+    margin-bottom: 1.3rem;
+    color: white ;
+    font-weight: 700;
+}
+
+.left .dollar{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 1.9rem;
+    font-weight: 700;
+}
+
+.left .text{
+    color: hsl(204, 43%, 80%);
+    margin-left: .5rem;
+    font-size: .8rem;
+    display: inline-block;
+    transform: translateY(-.3rem);
+}
+
+.left > p{
+    color: hsl(204, 50%, 85%);
+    margin-top: .5rem;
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+    font-size: .9rem;
+}
+
+.left button{
+    display: block;
+    padding: 1rem;
+    margin-left: 2rem;
+    width: 75%;
+    border: none;
+    border-radius: .5rem;
+    color: white;
+    background-color: hsl(71, 73%, 54%);
+    box-shadow: .1rem .4rem .4rem rgba(99, 97, 97, 0.39);
+}
+
+.right{
+    background-color: hsl(179, 54%, 49%);
+    grid-area: right;
+}
+
+.right > h2{
+    padding-top: 2rem;
+    font-size: 1rem;
+    margin-left: 2rem;
+    margin-bottom: 1.3rem;
+    color: white ;
+}
+
+.right p {
+    margin-left: 2rem;
+    font-size: .8rem;
+    width: 11rem;
+    color: white;
+    font-weight: 400;
+    color: hsl(204, 50%, 85%);
+    line-height: 1.4;
+}
+
+footer {
+  position: absolute;
+  margin-top: 30rem;
+}
+.attribution {
+    font-size: 1rem; 
+   
+}
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+}
+
+@media screen and (max-width: 526px) {
+    main {
+      width: 85%;
+      grid-template-areas: 
+        'header'
+        'left'
+        'right';
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+    }
+
+    .left, .right {
+        margin-left: 0;
+      }
+    
+      .top-header > h1 {
+        font-size: 1.1rem;
+        margin-left: 1.5rem;
+        margin-bottom: 1rem;
+      }
+    
+      .top-header > h2 {
+        font-size: 0.9rem;
+        margin-left: 1.5rem;
+        width: 13rem;
+      }
+    
+      .top-header p {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        font-size: 0.8rem;
+        width: auto;
+        margin-bottom: 1.5rem;
+      }
+    
+      .left > h2 {
+        font-size: 1.1rem;
+        margin-left: 1.5rem;
+        margin-bottom: 1rem;
+      }
+    
+      .left .dollar {
+        font-size: 1.5rem;
+        margin-left: 1.5rem;
+        font-weight: 600;
+      }
+    
+      .left .text {
+        font-size: 0.8rem;
+        margin-left: 0.3rem;
+      }
+    
+      .left > p {
+        font-size: 0.8rem;
+        margin-left: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+    
+      .left button {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        width: 100%;
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+      }
+    
+      .right > h2 {
+        font-size: 1.1rem;
+        margin-left: 1.5rem;
+        margin-bottom: 1rem;
+      }
+    
+      .right p {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        font-size: 0.8rem;
+        margin-bottom: 1.5rem;
+      }
+  
+      .left button{
+        width: 80%;
+      }
+
+      footer{
+        margin-top: 43.5rem;
+      }
+    }
